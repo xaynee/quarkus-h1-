@@ -1,0 +1,36 @@
+quarkus:
+  log:
+    level: INFO
+  http:
+    port: 8880
+    auth:
+      policy:
+        protect-policy:
+          roles-allowed: protect
+        admin-policy:
+          roles-allowed: admin
+        maintainer-policy:
+          roles-allowed: maintainer
+      permission:
+        public:
+          paths: /api/v1/public/*
+          policy: permit
+        protect:
+          paths: /api/v1/protect/*
+          policy: authenticated
+        admin:
+          paths: /api/v1/admin/*
+          policy: admin-policy
+        maintainer:
+          paths: /api/v1/maintainer/*
+          policy: maintainer-policy
+  datasource:
+    db-kind: mysql
+    username: root
+    password: ""
+    jdbc:
+      url: jdbc:mysql://localhost:3306/mahasiswa
+  hibernate-orm:
+    database:
+      generation:
+        ~: none
