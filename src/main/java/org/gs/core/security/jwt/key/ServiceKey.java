@@ -1,12 +1,14 @@
 package org.gs.core.security.jwt.key;
 
-import io.jsonwebtoken.security.Keys;
-import io.quarkus.logging.Log;
-import org.eclipse.microprofile.config.ConfigProvider;
-
-import javax.inject.Singleton;
 import java.security.Key;
 import java.util.Base64;
+
+import javax.inject.Singleton;
+
+import org.eclipse.microprofile.config.ConfigProvider;
+
+import io.jsonwebtoken.security.Keys;
+import io.quarkus.logging.Log;
 
 @Singleton
 public class ServiceKey {

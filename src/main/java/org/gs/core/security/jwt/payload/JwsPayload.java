@@ -1,11 +1,12 @@
 package org.gs.core.security.jwt.payload;
 
-import org.gs.core.security.jwt.enums.JwtType;
-import org.gs.core.util.CheckUtil;
-import lombok.Data;
-
 import java.util.Date;
 import java.util.Objects;
+
+import org.gs.core.security.jwt.enums.JwtType;
+import org.gs.core.util.CheckUtil;
+
+import lombok.Data;
 
 @Data
 public class JwsPayload {

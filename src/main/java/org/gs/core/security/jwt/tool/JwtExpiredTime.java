@@ -1,10 +1,11 @@
 package org.gs.core.security.jwt.tool;
 
+import java.time.temporal.ChronoUnit;
+
 import org.gs.exception.ExceptionCode;
 import org.gs.exception.FormatException;
-import lombok.Data;
 
-import java.time.temporal.ChronoUnit;
+import lombok.Data;
 
 @Data
 public class JwtExpiredTime {

@@ -1,10 +1,10 @@
 package org.gs.core.security.jwt.payload;
 
+import java.security.Key;
+
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
-
-import java.security.Key;
 
 @EqualsAndHashCode
 @ToString

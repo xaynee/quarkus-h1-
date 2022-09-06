@@ -1,15 +1,17 @@
 package org.gs.core.security.mechanism;
 
+import java.security.Principal;
+import java.util.Objects;
+
 import org.gs.core.security.jwt.enums.HeaderType;
 import org.gs.core.security.jwt.payload.BodyPayload;
+
+import org.apache.commons.lang3.math.NumberUtils;
+
 import io.jsonwebtoken.Claims;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
-import org.apache.commons.lang3.math.NumberUtils;
-
-import java.security.Principal;
-import java.util.Objects;
 
 @Data
 @RequiredArgsConstructor(access = AccessLevel.PRIVATE)

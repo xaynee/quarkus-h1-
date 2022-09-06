@@ -1,18 +1,26 @@
 package org.gs.core.security.jwt.key;
 
-import org.gs.core.rest.client.PublicKeyClient;
-import org.gs.exception.PublicKeyBlacklistException;
-import io.quarkus.runtime.StartupEvent;
-import org.eclipse.microprofile.rest.client.inject.RestClient;
-import org.jboss.logging.Logger;
+import java.security.KeyFactory;
+import java.security.PublicKey;
+import java.security.spec.X509EncodedKeySpec;
+import java.util.Base64;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Set;
 
 import javax.enterprise.event.Observes;
 import javax.inject.Inject;
 import javax.inject.Singleton;
-import java.security.KeyFactory;
-import java.security.PublicKey;
-import java.security.spec.X509EncodedKeySpec;
-import java.util.*;
+
+import org.gs.core.rest.client.PublicKeyClient;
+import org.gs.exception.PublicKeyBlacklistException;
+
+import org.eclipse.microprofile.rest.client.inject.RestClient;
+import org.jboss.logging.Logger;
+
+import io.quarkus.runtime.StartupEvent;
 
 @Singleton
 public class InternalKey {

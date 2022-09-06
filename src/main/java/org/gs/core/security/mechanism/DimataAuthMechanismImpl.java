@@ -1,15 +1,17 @@
 package org.gs.core.security.mechanism;
 
+import java.util.Optional;
+
+import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
+
 import org.gs.core.security.jwt.authentication.AuthenticationHandler;
 import org.gs.exception.PublicKeyException;
+
 import io.quarkus.security.identity.SecurityIdentity;
 import io.smallrye.mutiny.Uni;
 import io.vertx.core.http.HttpServerRequest;
 import io.vertx.ext.web.RoutingContext;
-
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
-import java.util.Optional;
 
 @ApplicationScoped
 public class DimataAuthMechanismImpl {

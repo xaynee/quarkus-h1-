@@ -1,5 +1,10 @@
 package org.gs.core.security.jwt.authentication;
 
+import java.security.Key;
+
+import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
+
 import org.gs.core.security.jwt.key.InternalKey;
 import org.gs.core.security.jwt.key.ServiceKey;
 import org.gs.core.security.jwt.tool.JwtTools;
@@ -8,14 +13,17 @@ import org.gs.core.util.CheckUtil;
 import org.gs.exception.ExceptionCode;
 import org.gs.exception.PublicKeyException;
 import org.gs.exception.UnauthorizedAccessException;
-import io.jsonwebtoken.*;
-import io.jsonwebtoken.security.SignatureException;
-import io.quarkus.security.identity.SecurityIdentity;
+
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
-import java.security.Key;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.ExpiredJwtException;
+import io.jsonwebtoken.JwsHeader;
+import io.jsonwebtoken.JwtParser;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SigningKeyResolverAdapter;
+import io.jsonwebtoken.security.SignatureException;
+import io.quarkus.security.identity.SecurityIdentity;
 
 @ApplicationScoped
 public class AuthenticationHandler {

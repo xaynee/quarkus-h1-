@@ -1,17 +1,20 @@
 package org.gs.core.security.jwt.handler;
 
+import java.util.UUID;
+
+import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
+
 import org.gs.core.security.jwt.enums.JwtType;
 import org.gs.core.security.jwt.key.ServiceKey;
 import org.gs.core.security.jwt.payload.BodyPayload;
 import org.gs.core.security.jwt.payload.HeaderPayload;
 import org.gs.core.security.jwt.payload.JwsPayload;
 import org.gs.core.security.jwt.tool.JwtExpiredTime;
-import io.jsonwebtoken.Claims;
+
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
-import java.util.UUID;
+import io.jsonwebtoken.Claims;
 
 @ApplicationScoped
 public class ServiceCommJwtHandler {

@@ -1,13 +1,15 @@
 package org.gs.core.security.jwt.handler;
 
+import java.security.Key;
+
+import javax.enterprise.context.ApplicationScoped;
+
 import org.gs.core.security.jwt.payload.BodyPayload;
 import org.gs.core.security.jwt.payload.HeaderPayload;
 import org.gs.core.security.jwt.payload.JwsBuilder;
 import org.gs.core.security.jwt.payload.JwsPayload;
-import io.jsonwebtoken.Jwts;
 
-import javax.enterprise.context.ApplicationScoped;
-import java.security.Key;
+import io.jsonwebtoken.Jwts;
 
 @ApplicationScoped
 public class JwtCreationHandler {

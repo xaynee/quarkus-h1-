@@ -1,13 +1,14 @@
 package org.gs.core.security.jwt.tool;
 
-import org.gs.core.security.jwt.payload.BodyPayload;
-import org.gs.exception.FormatException;
-import io.jsonwebtoken.Claims;
-
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
+
+import org.gs.core.security.jwt.payload.BodyPayload;
+import org.gs.exception.FormatException;
+
+import io.jsonwebtoken.Claims;
 
 public interface JwtTools {
     

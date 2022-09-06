@@ -1,13 +1,14 @@
 package org.gs.core.security.jwt.payload;
 
+import java.util.Objects;
+
 import org.gs.core.util.CheckUtil;
 import org.gs.exception.ExceptionCode;
 import org.gs.exception.FormatException;
+
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
-
-import java.util.Objects;
 
 @Data
 @RequiredArgsConstructor(access = AccessLevel.PRIVATE)

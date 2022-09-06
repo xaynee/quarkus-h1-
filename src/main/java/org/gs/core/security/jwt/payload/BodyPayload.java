@@ -1,14 +1,25 @@
 package org.gs.core.security.jwt.payload;
 
-import org.gs.core.security.jwt.enums.JwtType;
-import org.gs.core.util.FormatUtil;
-import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.Jwts;
-import lombok.*;
-
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
-import java.util.*;
+import java.util.Collection;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
+import org.gs.core.security.jwt.enums.JwtType;
+import org.gs.core.util.FormatUtil;
+
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
+import lombok.With;
 
 @Getter
 @EqualsAndHashCode
