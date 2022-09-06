@@ -29,7 +29,7 @@ quarkus:
     username: root
     password: ""
     jdbc:
-      url: jdbc:mysql://localhost:3306/mahasiswa
+      url: jdbc:mysql://localhost:3306/project_backend
   hibernate-orm:
     database:
       generation:

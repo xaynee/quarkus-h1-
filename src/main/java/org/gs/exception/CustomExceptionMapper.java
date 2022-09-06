@@ -1,4 +1,4 @@
-package com.dimata.service.general.harisma.exception;
+package org.gs.exception;
 
 import io.quarkus.logging.Log;
 import io.quarkus.runtime.configuration.ProfileManager;

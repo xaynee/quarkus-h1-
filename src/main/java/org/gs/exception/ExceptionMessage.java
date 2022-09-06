@@ -1,4 +1,4 @@
-package com.dimata.service.general.harisma.exception;
+package org.gs.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

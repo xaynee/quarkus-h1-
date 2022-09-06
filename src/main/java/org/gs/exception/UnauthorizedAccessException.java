@@ -1,4 +1,4 @@
-package com.dimata.service.general.harisma.exception;
+package org.gs.exception;
 
 /**
  * Gunakan Exeption ini jika users tidak diizinkan masuk. Contoh : Password

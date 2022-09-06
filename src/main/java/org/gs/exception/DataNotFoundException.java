@@ -1,4 +1,4 @@
-package com.dimata.service.general.harisma.exception;
+package org.gs.exception;
 
 /**
  * Gunakan exception ini jika data tidak tersedia di database.
