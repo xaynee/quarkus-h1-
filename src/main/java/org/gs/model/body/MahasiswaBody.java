@@ -3,7 +3,6 @@ package org.gs.model.body;
 import static org.gs.core.util.ManipulateUtil.changeItOrNot;
 
 
-import org.gs.entity.DosenTable;
 import org.gs.entity.MahasiswaTable;
 
 import lombok.Data;
@@ -25,7 +24,10 @@ public class MahasiswaBody {
         return output;
     }
 
-    public MahasiswaBody updateMahasiswaBody(MahasiswaTable mahasiswa){
-        mahasiswa.namaMahasiswa = changeItOrNot();
+    public MahasiswaTable updateMahasiswaBody(MahasiswaTable mahasiswa){
+        mahasiswa.namaMahasiswa = changeItOrNot(namaMahasiswa, mahasiswa.namaMahasiswa);
+        mahasiswa.jenisKelamin = changeItOrNot(jenisKelamin, mahasiswa.jenisKelamin);
+        mahasiswa.noTelp = changeItOrNot(noTelp, mahasiswa.noTelp);
+        return mahasiswa;
     }
 }

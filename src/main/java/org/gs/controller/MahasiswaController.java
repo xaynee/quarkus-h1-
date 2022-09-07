@@ -4,7 +4,7 @@ package org.gs.controller;
 import org.gs.entity.MahasiswaTable;
 import org.gs.model.body.MahasiswaBody;
 import org.gs.service.MahasiswaHandler;
-
+import org.jboss.resteasy.annotations.jaxrs.QueryParam;
 
 import javax.inject.Inject;
 import javax.transaction.Transactional;
@@ -12,7 +12,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
-import javax.ws.rs.QueryParam;
+
 
 import java.util.List;
 
@@ -24,7 +24,7 @@ public class MahasiswaController {
 
 @GET
 public List<MahasiswaBody> getMahasiswa(@QueryParam long id){
-    return mahasiswaHandler.getMahasiswa(id);
+    return mahasiswaHandler.getMahasiswaTable(id);
 }
 
 @GET
@@ -44,7 +44,7 @@ public MahasiswaTable updateMahasiswa(MahasiswaBody body){
 @GET
 @Path("/create")
 @Transactional
-public MahasiswaBody createMahasiswa(MahasiswaBody body){
+public MahasiswaBody createMahasiswaTable(MahasiswaBody body){
     return mahasiswaHandler.createMahasiswaTable(body);
 }
 }
